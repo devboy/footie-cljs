@@ -1,0 +1,18 @@
+goog.addDependency("base.js", ['goog'], []);
+goog.addDependency("../cljs/core.js", ['cljs.core'], ['goog.string', 'goog.array', 'goog.object', 'goog.string.StringBuffer']);
+goog.addDependency("../clojure/set.js", ['clojure.set'], ['cljs.core']);
+goog.addDependency("../entitas_clj/matcher.js", ['entitas_clj.matcher'], ['cljs.core', 'clojure.set']);
+goog.addDependency("../entitas_clj/collection.js", ['entitas_clj.collection'], ['entitas_clj.matcher', 'cljs.core']);
+goog.addDependency("../entitas_clj/component.js", ['entitas_clj.component'], ['cljs.core']);
+goog.addDependency("../entitas_clj/entity.js", ['entitas_clj.entity'], ['cljs.core', 'clojure.set', 'entitas_clj.component']);
+goog.addDependency("../entitas_clj/repository.js", ['entitas_clj.repository'], ['entitas_clj.matcher', 'cljs.core', 'entitas_clj.collection', 'entitas_clj.entity', 'entitas_clj.component']);
+goog.addDependency("../entitas_clj/repository_observer.js", ['entitas_clj.repository_observer'], ['cljs.core', 'entitas_clj.collection', 'entitas_clj.repository']);
+goog.addDependency("../cljs/core/async/impl/protocols.js", ['cljs.core.async.impl.protocols'], ['cljs.core']);
+goog.addDependency("../cljs/core/async/impl/ioc_helpers.js", ['cljs.core.async.impl.ioc_helpers'], ['cljs.core', 'cljs.core.async.impl.protocols']);
+goog.addDependency("../cljs/core/async/impl/buffers.js", ['cljs.core.async.impl.buffers'], ['cljs.core', 'cljs.core.async.impl.protocols']);
+goog.addDependency("../cljs/core/async/impl/dispatch.js", ['cljs.core.async.impl.dispatch'], ['cljs.core.async.impl.buffers', 'cljs.core']);
+goog.addDependency("../cljs/core/async/impl/channels.js", ['cljs.core.async.impl.channels'], ['cljs.core.async.impl.buffers', 'cljs.core', 'cljs.core.async.impl.dispatch', 'cljs.core.async.impl.protocols']);
+goog.addDependency("../cljs/core/async/impl/timers.js", ['cljs.core.async.impl.timers'], ['cljs.core', 'cljs.core.async.impl.channels', 'cljs.core.async.impl.dispatch', 'cljs.core.async.impl.protocols']);
+goog.addDependency("../cljs/core/async.js", ['cljs.core.async'], ['cljs.core.async.impl.ioc_helpers', 'cljs.core.async.impl.buffers', 'cljs.core', 'cljs.core.async.impl.channels', 'cljs.core.async.impl.dispatch', 'cljs.core.async.impl.protocols', 'cljs.core.async.impl.timers']);
+goog.addDependency("../entitas_clj/system.js", ['entitas_clj.system'], ['cljs.core', 'cljs.core.async']);
+goog.addDependency("../footie_cljs2/core.js", ['footie_cljs2.core'], ['cljs.core', 'entitas_clj.collection', 'entitas_clj.entity', 'entitas_clj.repository_observer', 'entitas_clj.component', 'entitas_clj.system', 'entitas_clj.repository']);
